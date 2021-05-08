@@ -28,8 +28,8 @@
 #define LED0                    PB5
 #define LED1                    PB4
 
-#define BEEPER                  PA8
-#define BEEPER_INVERTED
+//#define BEEPER                  PA8
+//#define BEEPER_INVERTED
 
 // *************** Gyro & ACC **********************
 #define USE_SPI
@@ -78,8 +78,8 @@
 #define VBUS_SENSING_ENABLED
 
 #define USE_UART1
-#define UART1_RX_PIN            PA10
-#define UART1_TX_PIN            PA9
+#define UART1_RX_PIN            PB7
+#define UART1_TX_PIN            PB6
 
 #define USE_UART3
 #define UART3_RX_PIN            PB11
@@ -89,20 +89,20 @@
 #define UART6_RX_PIN            PC7
 #define UART6_TX_PIN            PC6
 
-#define USE_SOFTSERIAL1
-#define SOFTSERIAL_1_RX_PIN      PA1
-#define SOFTSERIAL_1_TX_PIN      PC9  // PPM
+//#define USE_SOFTSERIAL1
+//#define SOFTSERIAL_1_RX_PIN      PA1
+//#define SOFTSERIAL_1_TX_PIN      PC9  // PPM
 
 //#define USE_SOFTSERIAL2
 //#define SOFTSERIAL_2_RX_PIN      PA2
 //#define SOFTSERIAL_2_TX_PIN      PA2
 
-#define SERIAL_PORT_COUNT       5
+#define SERIAL_PORT_COUNT       4
 
-#ifdef MAMBAF405
-#   define USE_UART_INVERTER
-#   define INVERTER_PIN_UART1_RX    PC0
-#endif
+//#ifdef MAMBAF405
+//#   define USE_UART_INVERTER
+//#   define INVERTER_PIN_UART1_RX    PC0
+//#endif
 
 
 #define DEFAULT_RX_TYPE         RX_TYPE_SERIAL
@@ -110,13 +110,14 @@
 #define SERIALRX_UART           SERIAL_PORT_USART1
 
 #define USE_I2C
-#define USE_I2C_DEVICE_1
-#define I2C1_SCL                PB6
-#define I2C1_SDA                PB7
-#define DEFAULT_I2C_BUS         BUS_I2C1
+#define USE_I2C_DEVICE_3
+#define I2C3_SCL                PA8
+#define I2C3_SDA                PC9
+#define DEFAULT_I2C_BUS         BUS_I2C3
 
 #define USE_BARO
 #define BARO_I2C_BUS                DEFAULT_I2C_BUS
+#define USE_BARO_BMP280
 #define USE_BARO_BMP280
 #define USE_BARO_MS5611
 #define USE_BARO_BMP085
